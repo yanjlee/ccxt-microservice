@@ -1,38 +1,7 @@
-ccxt-microservice
-=================
+# ccxtbot
 
-Micro service to call cryptocurrency exchanges API using [ccxt](https://github.com/ccxt/ccxt).
+This is a pet project to get familiar with a number of APIs for trading
+cryptocurrencies via algorithms.
 
-# Usage
-
-1. Run a service
-
-  ```
-  python app.py
-  ```
-  or
-  ```
-  docker-compose up 
-  ```
-
-2. Send a request
-
-  Send post json to /*exchange*/*method*. Default port is 5000.
-
-# Example
-
-In ccxt, fetch ticker of Bittrex for ETH/BTc is:
-
-```python
-import ccxt
-
-b = ccxt.bittrex()
-result = b.fetch_ticker(symbol="ETH/BTC")
-```
-
-Following request is equivalent to the above.
-
-```
-curl -H 'Content-Type:application/json' -d'{"symbol":"ETH/BTC"}' localhost:5000/bittrex/fetch_ticker
-```
-  
+So far, ccxt was used to connect to exchanges and get backtesting data.
+Also, plotly was used to visualize results.
